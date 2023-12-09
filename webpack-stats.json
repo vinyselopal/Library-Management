@@ -1,0 +1,58 @@
+{
+  "status": "done",
+  "assets": {
+    "131-374ebfdfdc6ff229bd66.js": {
+      "name": "131-374ebfdfdc6ff229bd66.js",
+      "path": "/home/viny/library_management/static/webpack_bundles/131-374ebfdfdc6ff229bd66.js",
+      "publicPath": "/static/131-374ebfdfdc6ff229bd66.js"
+    },
+    "131-374ebfdfdc6ff229bd66.js.map": {
+      "name": "131-374ebfdfdc6ff229bd66.js.map",
+      "path": "/home/viny/library_management/static/webpack_bundles/131-374ebfdfdc6ff229bd66.js.map",
+      "publicPath": "/static/131-374ebfdfdc6ff229bd66.js.map"
+    },
+    "615-ab2744a96c3e8616bc3a.js": {
+      "name": "615-ab2744a96c3e8616bc3a.js",
+      "path": "/home/viny/library_management/static/webpack_bundles/615-ab2744a96c3e8616bc3a.js",
+      "publicPath": "/static/615-ab2744a96c3e8616bc3a.js"
+    },
+    "615-ab2744a96c3e8616bc3a.js.LICENSE.txt": {
+      "name": "615-ab2744a96c3e8616bc3a.js.LICENSE.txt",
+      "path": "/home/viny/library_management/static/webpack_bundles/615-ab2744a96c3e8616bc3a.js.LICENSE.txt",
+      "publicPath": "/static/615-ab2744a96c3e8616bc3a.js.LICENSE.txt"
+    },
+    "615-ab2744a96c3e8616bc3a.js.map": {
+      "name": "615-ab2744a96c3e8616bc3a.js.map",
+      "path": "/home/viny/library_management/static/webpack_bundles/615-ab2744a96c3e8616bc3a.js.map",
+      "publicPath": "/static/615-ab2744a96c3e8616bc3a.js.map"
+    },
+    "main-30bc6268d1cc5a055ed8.css": {
+      "name": "main-30bc6268d1cc5a055ed8.css",
+      "path": "/home/viny/library_management/static/webpack_bundles/main-30bc6268d1cc5a055ed8.css",
+      "publicPath": "/static/main-30bc6268d1cc5a055ed8.css"
+    },
+    "main-30bc6268d1cc5a055ed8.css.map": {
+      "name": "main-30bc6268d1cc5a055ed8.css.map",
+      "path": "/home/viny/library_management/static/webpack_bundles/main-30bc6268d1cc5a055ed8.css.map",
+      "publicPath": "/static/main-30bc6268d1cc5a055ed8.css.map"
+    },
+    "main-30bc6268d1cc5a055ed8.js": {
+      "name": "main-30bc6268d1cc5a055ed8.js",
+      "path": "/home/viny/library_management/static/webpack_bundles/main-30bc6268d1cc5a055ed8.js",
+      "publicPath": "/static/main-30bc6268d1cc5a055ed8.js"
+    },
+    "main-30bc6268d1cc5a055ed8.js.map": {
+      "name": "main-30bc6268d1cc5a055ed8.js.map",
+      "path": "/home/viny/library_management/static/webpack_bundles/main-30bc6268d1cc5a055ed8.js.map",
+      "publicPath": "/static/main-30bc6268d1cc5a055ed8.js.map"
+    }
+  },
+  "chunks": {
+    "main": [
+      "615-ab2744a96c3e8616bc3a.js",
+      "main-30bc6268d1cc5a055ed8.css",
+      "main-30bc6268d1cc5a055ed8.js"
+    ]
+  },
+  "publicPath": "/static/"
+}
