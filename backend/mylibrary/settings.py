@@ -42,7 +42,10 @@ SECRET_KEY = os.environ.get(
 )
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://library-management-ymzu.onrender.com/",
+    "localhost",
+]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
 if RENDER_EXTERNAL_HOSTNAME:

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000/librarymanagement";
+const BASE_URL = process.env.APP_URL;
 
 export const getBooks = async (fields) => {
   const response = await fetch(

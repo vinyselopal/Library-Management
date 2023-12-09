@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleTracker = require("webpack-bundle-tracker");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = (env, argv) => {
   const isDev = argv.mode === "development";
@@ -103,6 +104,9 @@ module.exports = (env, argv) => {
         filename: "webpack-stats.json",
       }),
       isDev && new HtmlWebpackPlugin(),
+      new Dotenv({
+        path: path.resolve(__dirname, ".env"),
+      }),
     ].filter(Boolean),
     resolve: {
       modules: [nodeModulesDir, path.resolve(__dirname, "frontend/js/")],
