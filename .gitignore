@@ -1,9 +1,9 @@
-// backend
+# backend
 # Django #
 backend/*.log
 backend/*.pot
 backend/*.pyc
-backend/__pycache__
+backend/**/__pycache__
 backend/db.sqlite3
 backend/media
 
@@ -140,7 +140,9 @@ backend/.history
 # docs
 backend/docs/
 
-// frontend
+backend/**/bin
+
+# frontend
 
 # dependencies
 frontend/node_modules
@@ -152,6 +154,7 @@ frontend/coverage
 
 # production
 frontend/build
+frontend/bundles
 
 # misc
 frontend/.DS_Store
@@ -165,8 +168,10 @@ frontend/yarn-debug.log*
 frontend/yarn-error.log*
 frontend/docs/
 
-// root
+
+# root
 node_modules
 static/
+webpack-stats.json
 
 
