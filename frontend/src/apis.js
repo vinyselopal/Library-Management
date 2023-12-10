@@ -1,8 +1,10 @@
+import urlJoin from "url-join";
+
 const BASE_URL = process.env.APP_URL;
 
 export const getBooks = async (fields) => {
   const response = await fetch(
-    BASE_URL + `/books?author=${fields.author}&title=${fields.title}`
+    urlJoin(BASE_URL, `/books?author=${fields.author}&title=${fields.title}`)
   );
   const parsedResponse = await response.json();
   const books = parsedResponse.message;
@@ -11,8 +13,10 @@ export const getBooks = async (fields) => {
 
 export const importBooks = async (fields) => {
   const response = await fetch(
-    BASE_URL +
+    urlJoin(
+      BASE_URL,
       `/books/import_books?author=${fields.author}&title=${fields.title}&quantity=${fields.quantity}`
+    )
   );
   const parsedResponse = await response.json();
   const books = parsedResponse.message;
@@ -20,7 +24,7 @@ export const importBooks = async (fields) => {
 };
 
 export const addBooks = async (books) => {
-  const response = await fetch(BASE_URL + "/books", {
+  const response = await fetch(urlJoin(BASE_URL, "/books"), {
     body: JSON.stringify({ books }),
     method: "POST",
     "Content-Type": "application/json",
@@ -32,7 +36,7 @@ export const addBooks = async (books) => {
 
 export const issueBook = async (fields) => {
   console.log(fields);
-  const response = await fetch(BASE_URL + "/members/issue_book", {
+  const response = await fetch(urlJoin(BASE_URL, "/members/issue_book"), {
     body: JSON.stringify(fields),
     method: "POST",
     "Content-Type": "application/json",
@@ -44,8 +48,10 @@ export const issueBook = async (fields) => {
 
 export const getMembers = async (fields) => {
   const response = await fetch(
-    BASE_URL +
+    urlJoin(
+      BASE_URL,
       `/members?${fields ? `outstanding_debt=${fields.outstanding_debt}` : ""}`
+    )
   );
   const parsedResponse = await response.json();
   const members = parsedResponse.message;
@@ -54,8 +60,10 @@ export const getMembers = async (fields) => {
 
 export const getTransactions = async (fields) => {
   const response = await fetch(
-    BASE_URL +
+    urlJoin(
+      BASE_URL,
       `/transactions?book_author=${fields.book_author}&book_title=${fields.book_title}&issue_date=${fields.issue_date}&return_date=${fields.return_date}&payment_done=${fields.payment_done}&member_email=${fields.member_email}`
+    )
   );
   const parsedResponse = await response.json();
   const transactions = parsedResponse.message;
@@ -64,7 +72,7 @@ export const getTransactions = async (fields) => {
 
 export const returnBook = async (record_id) => {
   const response = await fetch(
-    BASE_URL + `/transactions/${record_id}/return_book`,
+    urlJoin(BASE_URL, `/transactions/${record_id}/return_book`),
     {
       method: "PUT",
     }
@@ -76,7 +84,7 @@ export const returnBook = async (record_id) => {
 
 export const chargeBookFee = async (record_id) => {
   const response = await fetch(
-    BASE_URL + `/transactions/${record_id}/charge_fee`,
+    urlJoin(BASE_URL, `/transactions/${record_id}/charge_fee`),
     {
       method: "PUT",
     }
