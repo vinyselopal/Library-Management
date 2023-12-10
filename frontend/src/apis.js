@@ -1,6 +1,6 @@
 import urlJoin from "url-join";
 
-const BASE_URL = process.env.APP_URL;
+const BASE_URL = "https://library-management-ymzu.onrender.com";
 
 export const getBooks = async (fields) => {
   const response = await fetch(
@@ -12,6 +12,7 @@ export const getBooks = async (fields) => {
 };
 
 export const importBooks = async (fields) => {
+  console.log(BASE_URL);
   const response = await fetch(
     urlJoin(
       BASE_URL,
