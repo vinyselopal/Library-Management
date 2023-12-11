@@ -5,49 +5,48 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('librarymanagement', '0002_remove_book_stock'),
+        ("librarymanagement", "0002_remove_book_stock"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='member',
-            name='name',
+            model_name="member",
+            name="name",
         ),
         migrations.AddField(
-            model_name='book',
-            name='authors',
+            model_name="book",
+            name="authors",
             field=models.CharField(max_length=500, null=True),
         ),
         migrations.AddField(
-            model_name='book',
-            name='quantity',
+            model_name="book",
+            name="quantity",
             field=models.IntegerField(null=True),
         ),
         migrations.AddField(
-            model_name='book',
-            name='rent',
+            model_name="book",
+            name="rent",
             field=models.DecimalField(decimal_places=2, max_digits=100, null=True),
         ),
         migrations.AddField(
-            model_name='member',
-            name='email',
+            model_name="member",
+            name="email",
             field=models.EmailField(max_length=500, null=True),
         ),
         migrations.AddField(
-            model_name='transaction',
-            name='payment_done',
+            model_name="transaction",
+            name="payment_done",
             field=models.BooleanField(default=False),
         ),
         migrations.AlterField(
-            model_name='transaction',
-            name='issue_date',
+            model_name="transaction",
+            name="issue_date",
             field=models.DateTimeField(default=django.utils.timezone.now),
         ),
         migrations.AlterField(
-            model_name='transaction',
-            name='return_date',
+            model_name="transaction",
+            name="return_date",
             field=models.DateTimeField(null=True),
         ),
     ]

@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('librarymanagement', '0005_alter_book_unique_together'),
+        ("librarymanagement", "0005_alter_book_unique_together"),
     ]
 
     operations = [
         migrations.AlterUniqueTogether(
-            name='book',
-            unique_together={('title', 'authors')},
+            name="book",
+            unique_together={("title", "authors")},
         ),
     ]

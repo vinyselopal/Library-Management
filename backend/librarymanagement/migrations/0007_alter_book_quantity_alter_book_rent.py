@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('librarymanagement', '0006_alter_book_unique_together'),
+        ("librarymanagement", "0006_alter_book_unique_together"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='book',
-            name='quantity',
+            model_name="book",
+            name="quantity",
             field=models.IntegerField(default=1),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='rent',
+            model_name="book",
+            name="rent",
             field=models.DecimalField(decimal_places=2, default=50, max_digits=100),
         ),
     ]
